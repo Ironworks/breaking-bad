@@ -18,6 +18,7 @@
 		F0A62A0225489BCD0071BFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A62A0025489BCD0071BFC2 /* LaunchScreen.storyboard */; };
 		F0A62A1825489BD00071BFC2 /* BreakingBadCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */; };
 		F0A62A442548A0E30071BFC2 /* ChracterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A432548A0E30071BFC2 /* ChracterModelTests.swift */; };
+		F0A62A5C2548A2C10071BFC2 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersUITests.swift; sourceTree = "<group>"; };
 		F0A62A1925489BD00071BFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0A62A432548A0E30071BFC2 /* ChracterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChracterModelTests.swift; sourceTree = "<group>"; };
+		F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		F0A629F425489BC30071BFC2 /* BreakingBadCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				F0A62A5A2548A29F0071BFC2 /* Models */,
 				F0A629F525489BC30071BFC2 /* AppDelegate.swift */,
 				F0A629F725489BC30071BFC2 /* SceneDelegate.swift */,
 				F0A629F925489BC30071BFC2 /* ViewController.swift */,
@@ -166,6 +169,14 @@
 				F0A62A1925489BD00071BFC2 /* Info.plist */,
 			);
 			path = BreakingBadCharactersUITests;
+			sourceTree = "<group>";
+		};
+		F0A62A5A2548A29F0071BFC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A629FA25489BC30071BFC2 /* ViewController.swift in Sources */,
+				F0A62A5C2548A2C10071BFC2 /* CharacterModel.swift in Sources */,
 				F0A629F625489BC30071BFC2 /* AppDelegate.swift in Sources */,
 				F0A629F825489BC30071BFC2 /* SceneDelegate.swift in Sources */,
 			);
@@ -602,7 +614,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -628,7 +639,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadCharacters.app/BreakingBadCharacters";

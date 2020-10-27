@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		03E1509A0BC310BC96C4BAC7C976C72D /* Pods-BreakingBadCharactersTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreakingBadCharactersTests-Info.plist"; sourceTree = "<group>"; };
-		1875F9D1B645A5CC981EB1AED6C87000 /* Pods_BreakingBadCharactersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreakingBadCharactersTests.framework; path = "Pods-BreakingBadCharactersTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1875F9D1B645A5CC981EB1AED6C87000 /* Pods_BreakingBadCharactersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharactersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1FE2F8C83450E61824ADC1A0B1A2F3 /* Pods-BreakingBadCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakingBadCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D5A4D11335B304E6C1EE1578E0B79FD /* Pods-BreakingBadCharacters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakingBadCharacters.release.xcconfig"; sourceTree = "<group>"; };
 		1E26B58C68B30C8C9F587D704E6EE09B /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -38,16 +38,16 @@
 		2ACCC10B1174CEA0CDDE67388C51F50D /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		36031B54845EA7B99E547D7E11871CA5 /* Pods-BreakingBadCharacters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakingBadCharacters.debug.xcconfig"; sourceTree = "<group>"; };
-		4F5CE35116EE1ED489664129EBF706E2 /* Pods_BreakingBadCharacters_BreakingBadCharactersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreakingBadCharacters_BreakingBadCharactersUITests.framework; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5CE35116EE1ED489664129EBF706E2 /* Pods_BreakingBadCharacters_BreakingBadCharactersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharacters_BreakingBadCharactersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6427AB514D3C19FF3313A5928A4DE1BF /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		71CCC3921651A0ED373B33FC2A2F21FC /* Pods_BreakingBadCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreakingBadCharacters.framework; path = "Pods-BreakingBadCharacters.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CCC3921651A0ED373B33FC2A2F21FC /* Pods_BreakingBadCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DD2479DADF1429B84407860CA45F5F /* Pods-BreakingBadCharacters-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BreakingBadCharacters-dummy.m"; sourceTree = "<group>"; };
 		7976D780C545525E5F0D7CE632973A1B /* Pods-BreakingBadCharacters.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BreakingBadCharacters.modulemap"; sourceTree = "<group>"; };
 		7D91D8CA67AFC02F4BD291032B5ED56B /* Pods-BreakingBadCharactersTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BreakingBadCharactersTests-umbrella.h"; sourceTree = "<group>"; };
 		814FC59574721EC473ABAB0600B53948 /* Pods-BreakingBadCharactersTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BreakingBadCharactersTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		907E4911FFDBE88D42D0373975F2D632 /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests-Info.plist"; sourceTree = "<group>"; };
 		9CD666D0944AA390652667D78B164BD1 /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E54FC2369D13ED1052F649B8D4EB0EA /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1E659B8E374946F9F492A8A18BA9C0F /* Pods-BreakingBadCharacters-BreakingBadCharactersUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BreakingBadCharacters-BreakingBadCharactersUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A7AA44FD12355653270E786BD0EA0A82 /* Pods-BreakingBadCharactersTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreakingBadCharactersTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1210;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -536,6 +536,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -678,6 +679,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
