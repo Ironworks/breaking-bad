@@ -17,7 +17,10 @@
 		F0A629FF25489BCD0071BFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A629FE25489BCD0071BFC2 /* Assets.xcassets */; };
 		F0A62A0225489BCD0071BFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A62A0025489BCD0071BFC2 /* LaunchScreen.storyboard */; };
 		F0A62A1825489BD00071BFC2 /* BreakingBadCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */; };
-		F0A62A3925489EC70071BFC2 /* CharacterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */; };
+		F0A62A442548A0E30071BFC2 /* ChracterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A432548A0E30071BFC2 /* ChracterTests.swift */; };
+		F0A62A5C2548A2C10071BFC2 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */; };
+		F0A62A662548B2B00071BFC2 /* CharacterValid.json in Resources */ = {isa = PBXBuildFile; fileRef = F0A62A652548B2B00071BFC2 /* CharacterValid.json */; };
+		F0A62A762548B4BE0071BFC2 /* Bundle+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A752548B4BE0071BFC2 /* Bundle+LoadJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +63,10 @@
 		F0A62A1325489BD00071BFC2 /* BreakingBadCharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadCharactersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersUITests.swift; sourceTree = "<group>"; };
 		F0A62A1925489BD00071BFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0A62A3725489EC70071BFC2 /* BreakingBadCharactersTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BreakingBadCharactersTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelTests.swift; sourceTree = "<group>"; };
+		F0A62A432548A0E30071BFC2 /* ChracterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChracterTests.swift; sourceTree = "<group>"; };
+		F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		F0A62A652548B2B00071BFC2 /* CharacterValid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharacterValid.json; sourceTree = "<group>"; };
+		F0A62A752548B4BE0071BFC2 /* Bundle+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadJson.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +145,7 @@
 		F0A629F425489BC30071BFC2 /* BreakingBadCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				F0A62A5A2548A29F0071BFC2 /* Models */,
 				F0A629F525489BC30071BFC2 /* AppDelegate.swift */,
 				F0A629F725489BC30071BFC2 /* SceneDelegate.swift */,
 				F0A629F925489BC30071BFC2 /* ViewController.swift */,
@@ -154,9 +160,10 @@
 		F0A62A0B25489BD00071BFC2 /* BreakingBadCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0A62A642548B2520071BFC2 /* Fixtures */,
+				F0A62A632548B2460071BFC2 /* Helpers */,
 				F0A62A0E25489BD00071BFC2 /* Info.plist */,
-				F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */,
-				F0A62A3725489EC70071BFC2 /* BreakingBadCharactersTests-Bridging-Header.h */,
+				F0A62A432548A0E30071BFC2 /* ChracterTests.swift */,
 			);
 			path = BreakingBadCharactersTests;
 			sourceTree = "<group>";
@@ -168,6 +175,30 @@
 				F0A62A1925489BD00071BFC2 /* Info.plist */,
 			);
 			path = BreakingBadCharactersUITests;
+			sourceTree = "<group>";
+		};
+		F0A62A5A2548A29F0071BFC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0A62A5B2548A2C10071BFC2 /* CharacterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0A62A632548B2460071BFC2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0A62A752548B4BE0071BFC2 /* Bundle+LoadJson.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F0A62A642548B2520071BFC2 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				F0A62A652548B2B00071BFC2 /* CharacterValid.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A62A662548B2B00071BFC2 /* CharacterValid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A629FA25489BC30071BFC2 /* ViewController.swift in Sources */,
+				F0A62A5C2548A2C10071BFC2 /* CharacterModel.swift in Sources */,
 				F0A629F625489BC30071BFC2 /* AppDelegate.swift in Sources */,
 				F0A629F825489BC30071BFC2 /* SceneDelegate.swift in Sources */,
 			);
@@ -383,7 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A62A3925489EC70071BFC2 /* CharacterModelTests.swift in Sources */,
+				F0A62A442548A0E30071BFC2 /* ChracterTests.swift in Sources */,
+				F0A62A762548B4BE0071BFC2 /* Bundle+LoadJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +638,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,7 +663,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadCharacters.app/BreakingBadCharacters";
