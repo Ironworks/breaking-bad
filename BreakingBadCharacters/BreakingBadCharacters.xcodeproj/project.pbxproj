@@ -16,8 +16,8 @@
 		F0A629FD25489BC30071BFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A629FB25489BC30071BFC2 /* Main.storyboard */; };
 		F0A629FF25489BCD0071BFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A629FE25489BCD0071BFC2 /* Assets.xcassets */; };
 		F0A62A0225489BCD0071BFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A62A0025489BCD0071BFC2 /* LaunchScreen.storyboard */; };
-		F0A62A0D25489BD00071BFC2 /* BreakingBadCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A0C25489BD00071BFC2 /* BreakingBadCharactersTests.swift */; };
 		F0A62A1825489BD00071BFC2 /* BreakingBadCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */; };
+		F0A62A3925489EC70071BFC2 /* CharacterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,12 @@
 		F0A62A0125489BCD0071BFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A62A0325489BCD0071BFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0A62A0825489BD00071BFC2 /* BreakingBadCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0A62A0C25489BD00071BFC2 /* BreakingBadCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersTests.swift; sourceTree = "<group>"; };
 		F0A62A0E25489BD00071BFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0A62A1325489BD00071BFC2 /* BreakingBadCharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadCharactersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A62A1725489BD00071BFC2 /* BreakingBadCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersUITests.swift; sourceTree = "<group>"; };
 		F0A62A1925489BD00071BFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0A62A3725489EC70071BFC2 /* BreakingBadCharactersTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BreakingBadCharactersTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +112,6 @@
 				998DD1CB285017393E8A0175 /* Pods-BreakingBadCharactersTests.debug.xcconfig */,
 				A9D481EFD90D13BC2D185676 /* Pods-BreakingBadCharactersTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,8 +154,9 @@
 		F0A62A0B25489BD00071BFC2 /* BreakingBadCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
-				F0A62A0C25489BD00071BFC2 /* BreakingBadCharactersTests.swift */,
 				F0A62A0E25489BD00071BFC2 /* Info.plist */,
+				F0A62A3825489EC70071BFC2 /* CharacterModelTests.swift */,
+				F0A62A3725489EC70071BFC2 /* BreakingBadCharactersTests-Bridging-Header.h */,
 			);
 			path = BreakingBadCharactersTests;
 			sourceTree = "<group>";
@@ -242,6 +243,7 @@
 					};
 					F0A62A0725489BD00071BFC2 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = F0A629F125489BC30071BFC2;
 					};
 					F0A62A1225489BD00071BFC2 = {
@@ -381,7 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A62A0D25489BD00071BFC2 /* BreakingBadCharactersTests.swift in Sources */,
+				F0A62A3925489EC70071BFC2 /* CharacterModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +592,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				INFOPLIST_FILE = BreakingBadCharactersTests/Info.plist;
@@ -601,6 +604,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadCharacters.app/BreakingBadCharacters";
@@ -613,6 +618,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				INFOPLIST_FILE = BreakingBadCharactersTests/Info.plist;
@@ -624,6 +630,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksMediaLimited.BreakingBadCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BreakingBadCharactersTests/BreakingBadCharactersTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadCharacters.app/BreakingBadCharacters";
