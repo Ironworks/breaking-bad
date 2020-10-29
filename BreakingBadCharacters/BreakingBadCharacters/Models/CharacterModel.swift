@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct CharacterModel: Codable {
-    let characters: [Character]
-}
-
 struct Character: Codable {
     let charId: Int
     let name: String
