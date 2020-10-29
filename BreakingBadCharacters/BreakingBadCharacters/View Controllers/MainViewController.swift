@@ -23,6 +23,9 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 162
 
         let objectFactory = ObjectFactory()
         viewModel = objectFactory.mainViewModel(viewController: self)
@@ -36,15 +39,22 @@ class MainViewController: UIViewController, MainViewProtocol {
 }
 
 extension MainViewController: UITableViewDataSource {
+    
+    private func mainCellViewModel(from character: Character) -> MainCellViewModel {
+        return MainCellViewModel(image: character.img, name: character.name)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath)
-        let modelObject = model?[indexPath.row]
-        cell.textLabel?.text = modelObject?.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! MainTableViewCell
+        
+        guard let modelObject = model?[indexPath.row] else { return UITableViewCell() }
+ 
+        cell.configure(data: mainCellViewModel(from: modelObject))
         return cell
     }
     
@@ -54,4 +64,11 @@ extension MainViewController: UITableViewDataSource {
     }
     
 
+}
+
+extension MainViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 162
+    }
 }

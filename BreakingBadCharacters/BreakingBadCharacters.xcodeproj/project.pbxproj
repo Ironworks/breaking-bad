@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,9 @@
 		F0F5214D254ADFEA002C13A1 /* ObjectFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5214C254ADFEA002C13A1 /* ObjectFactoryTests.swift */; };
 		F0F52156254AE0AD002C13A1 /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F52155254AE0AD002C13A1 /* ObjectFactory.swift */; };
 		F0F5215F254AE65F002C13A1 /* MockMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5215E254AE65F002C13A1 /* MockMainViewController.swift */; };
+		F0F52168254AEEF3002C13A1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F52167254AEEF2002C13A1 /* MainTableViewCell.swift */; };
+		F0F5219A254B0F38002C13A1 /* MainCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F52199254B0F38002C13A1 /* MainCellViewModelTests.swift */; };
+		F0F5219F254B10B5002C13A1 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5219E254B10B5002C13A1 /* MainCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		F0F5214C254ADFEA002C13A1 /* ObjectFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactoryTests.swift; sourceTree = "<group>"; };
 		F0F52155254AE0AD002C13A1 /* ObjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
 		F0F5215E254AE65F002C13A1 /* MockMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainViewController.swift; sourceTree = "<group>"; };
+		F0F52167254AEEF2002C13A1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F0F52199254B0F38002C13A1 /* MainCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModelTests.swift; sourceTree = "<group>"; };
+		F0F5219E254B10B5002C13A1 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		F0A629F425489BC30071BFC2 /* BreakingBadCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				F0F52166254AEEAB002C13A1 /* Table Cells */,
 				F0F52154254AE096002C13A1 /* Object Factory */,
 				F0F52142254ACA59002C13A1 /* View Controllers */,
 				F0F52139254A52F1002C13A1 /* View Models */,
@@ -276,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F52131254A52E4002C13A1 /* MainViewModelTests.swift */,
+				F0F52199254B0F38002C13A1 /* MainCellViewModelTests.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F5213D254A530E002C13A1 /* MainViewModel.swift */,
+				F0F5219E254B10B5002C13A1 /* MainCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -320,6 +329,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		F0F52166254AEEAB002C13A1 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0F52167254AEEF2002C13A1 /* MainTableViewCell.swift */,
+			);
+			path = "Table Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,6 +348,7 @@
 				F0A629EE25489BC30071BFC2 /* Sources */,
 				F0A629EF25489BC30071BFC2 /* Frameworks */,
 				F0A629F025489BC30071BFC2 /* Resources */,
+				A352FC1AE84532B2794E9551 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,6 +386,7 @@
 				F0A62A0F25489BD00071BFC2 /* Sources */,
 				F0A62A1025489BD00071BFC2 /* Frameworks */,
 				F0A62A1125489BD00071BFC2 /* Resources */,
+				CE53783C482F3B18F0C6AA40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,6 +494,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A352FC1AE84532B2794E9551 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters/Pods-BreakingBadCharacters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters/Pods-BreakingBadCharacters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters/Pods-BreakingBadCharacters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B12C01CFFD4D3AFB25ABC339 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +555,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE53783C482F3B18F0C6AA40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters-BreakingBadCharactersUITests/Pods-BreakingBadCharacters-BreakingBadCharactersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters-BreakingBadCharactersUITests/Pods-BreakingBadCharacters-BreakingBadCharactersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BreakingBadCharacters-BreakingBadCharactersUITests/Pods-BreakingBadCharacters-BreakingBadCharactersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -529,7 +582,9 @@
 				F0EBA67D254A1D6200B0194F /* URLSession+Result.swift in Sources */,
 				F0EBA6722549DEFC00B0194F /* NetworkClient.swift in Sources */,
 				F0A62A5C2548A2C10071BFC2 /* CharacterModel.swift in Sources */,
+				F0F5219F254B10B5002C13A1 /* MainCellViewModel.swift in Sources */,
 				F0A629F625489BC30071BFC2 /* AppDelegate.swift in Sources */,
+				F0F52168254AEEF3002C13A1 /* MainTableViewCell.swift in Sources */,
 				F0F52156254AE0AD002C13A1 /* ObjectFactory.swift in Sources */,
 				F0EBA68C254A463D00B0194F /* Result+Decoded.swift in Sources */,
 				F0A629F825489BC30071BFC2 /* SceneDelegate.swift in Sources */,
@@ -548,6 +603,7 @@
 				F0F52132254A52E4002C13A1 /* MainViewModelTests.swift in Sources */,
 				F0EBA66C2549DDA300B0194F /* NetworkClientTests.swift in Sources */,
 				F0F5215F254AE65F002C13A1 /* MockMainViewController.swift in Sources */,
+				F0F5219A254B0F38002C13A1 /* MainCellViewModelTests.swift in Sources */,
 				F0EBA691254A46C600B0194F /* CharacterExpectedResults.swift in Sources */,
 				F0F5214D254ADFEA002C13A1 /* ObjectFactoryTests.swift in Sources */,
 			);
