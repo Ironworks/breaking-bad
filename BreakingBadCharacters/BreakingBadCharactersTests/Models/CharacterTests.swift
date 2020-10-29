@@ -35,11 +35,7 @@ class ChracterTests: XCTestCase {
         try super.tearDownWithError()
         
     }
-    
-    func test_CharacterModel_conforms_to_codeable () {
-        XCTAssertTrue(sut is Codable)
-    }
-    
+        
     func test_can_initialise_character_with_valid_data() {
         
         XCTAssertEqual(sut.charId, 1)

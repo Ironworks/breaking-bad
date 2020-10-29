@@ -81,24 +81,4 @@ class MockNetworkClient: NetworkClientInterface {
     }
 }
 
-class MockMainViewController: MainViewProtocol {
-    var reloadDataCalled = false
-    var showAlertCalled = false
-    var message = ""
-    
-    var model: [Character]? {
-        didSet {
-            reloadData()
-        }
-    }
-    
-    func reloadData() {
-        reloadDataCalled = true
-    }
-    
-    func showAlert(message: String) {
-        showAlertCalled = true
-        self.message = message
-    }
-    
-}
+
