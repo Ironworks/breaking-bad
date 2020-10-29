@@ -23,7 +23,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Character List"
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 162
 
@@ -33,6 +33,21 @@ class MainViewController: UIViewController, MainViewProtocol {
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if let cell = sender as? UITableViewCell,
+           let row = self.tableView.indexPath(for: cell)?.row,
+           let character = model?[row] {
+            
+            let detailViewModel = DetailViewModel(character: character)
+            
+            if segue.identifier == "ShowDetail" {
+                let vc = segue.destination as! DetailViewController
+                vc.viewModel = detailViewModel
+            }
+        }
+    }
+    
+    
     func showAlert(message: String) {
         
     }
