@@ -7,7 +7,11 @@
 
 import Foundation
 
-class NetworkClient {
+protocol NetworkClientInterface {
+    func getCharacters(completionHandler: @escaping (Result<Data, Error>) -> Void)
+}
+
+class NetworkClient: NetworkClientInterface {
     
     let baseURL: URL
     let session: URLResultSession
