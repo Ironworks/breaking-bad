@@ -79,10 +79,14 @@ class MainViewController: UIViewController, MainViewProtocol {
     }
     
     func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: {_ in
+            self.viewModel?.retrieveCharacters()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        self.present(alert, animated: true)
     }
-    
- 
 }
 
 extension MainViewController: UISearchResultsUpdating {
