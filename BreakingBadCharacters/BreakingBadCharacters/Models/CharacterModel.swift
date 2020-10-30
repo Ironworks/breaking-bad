@@ -15,7 +15,7 @@ struct Character: Codable {
     let img: String
     let status: String
     let nickname: String
-    let appearance: [Int]
+    let appearance: [Int]?
     let portrayed: String
     let category: String
     let betterCallSaulAppearance: [Int]
