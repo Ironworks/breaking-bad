@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
-class ObjectFactory {
+protocol ObjectFactoryInterface {
+    func networkClient() -> NetworkClient?
+    func mainViewModel(viewController: MainViewProtocol) -> MainViewModel?
+}
+
+
+class ObjectFactory: ObjectFactoryInterface {
     
     private let baseURLString = "https://breakingbadapi.com/"
     

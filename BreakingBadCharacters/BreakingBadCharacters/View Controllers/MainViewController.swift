@@ -22,15 +22,19 @@ class MainViewController: UIViewController, MainViewProtocol {
         }
     }
     
-    var viewModel: MainViewModel?
+    var viewModel: MainViewModelInterface?
     
     var filteredModel: [Character] = []
     
-    let objectFactory = ObjectFactory()
+    var objectFactory: ObjectFactoryInterface = ObjectFactory()
     
     let searchController = UISearchController(searchResultsController: nil)
     
     private var scopeButtonIndex = 0
+    
+   func retrieveCharacters() {
+        viewModel?.retrieveCharacters()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +53,9 @@ class MainViewController: UIViewController, MainViewProtocol {
         showSpinner()
         
         viewModel = objectFactory.mainViewModel(viewController: self)
-        viewModel?.retrieveCharacters() 
+        retrieveCharacters()
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
         if let cell = sender as? UITableViewCell,
            let row = self.tableView.indexPath(for: cell)?.row,
