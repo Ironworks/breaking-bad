@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController, MainViewProtocol {
- 
+
     @IBOutlet weak var tableView: UITableView!
     
     var model: [Character]? {
@@ -21,11 +21,26 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     var viewModel: MainViewModel?
     
+    var filteredModel: [Character] = []
+        
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    private var scopeButtonIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Character List"
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 162
+        
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search term"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        searchController.searchBar.scopeButtonTitles = ["Name", "Season"]
+        searchController.searchBar.delegate = self
 
         let objectFactory = ObjectFactory()
         viewModel = objectFactory.mainViewModel(viewController: self)
@@ -50,6 +65,27 @@ class MainViewController: UIViewController, MainViewProtocol {
     
     func showAlert(message: String) {
         
+    }
+    
+ 
+}
+
+extension MainViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        viewModel?.filteredContentForSearchText(searchBar.text!, searchIndex: scopeButtonIndex)
+    }
+}
+
+extension MainViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        scopeButtonIndex = selectedScope
+        searchBar.text = ""
+//        if scopeButtonIndex == 0 {
+//            viewModel?.filteredContentForSearchText("")
+//        } else {
+//            viewModel?.filteredContentForSearchText(searchBar.text!, searchIndex: scopeButtonIndex)
+//        }
     }
 }
 
