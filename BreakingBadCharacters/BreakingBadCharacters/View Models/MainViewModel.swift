@@ -13,7 +13,12 @@ protocol MainViewProtocol: class {
 
 import Foundation
 
-class MainViewModel {
+protocol MainViewModelInterface {
+    func retrieveCharacters()
+    func filteredContentForSearchText(_ searchText: String, searchIndex: Int)
+}
+
+class MainViewModel: MainViewModelInterface {
     
     var networkClient: NetworkClientInterface
     var model: [Character]?
