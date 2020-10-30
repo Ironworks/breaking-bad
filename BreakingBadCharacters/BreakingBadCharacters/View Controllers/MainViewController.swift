@@ -25,7 +25,9 @@ class MainViewController: UIViewController, MainViewProtocol {
     var viewModel: MainViewModel?
     
     var filteredModel: [Character] = []
-        
+    
+    let objectFactory = ObjectFactory()
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     private var scopeButtonIndex = 0
@@ -45,7 +47,7 @@ class MainViewController: UIViewController, MainViewProtocol {
         searchController.searchBar.scopeButtonTitles = ["Name", "Season"]
         searchController.searchBar.delegate = self
         showSpinner()
-        let objectFactory = ObjectFactory()
+        
         viewModel = objectFactory.mainViewModel(viewController: self)
         viewModel?.retrieveCharacters() 
     }
@@ -127,7 +129,6 @@ extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
 
 }
 
@@ -136,4 +137,5 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 162
     }
+    
 }

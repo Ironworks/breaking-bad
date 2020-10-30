@@ -12,11 +12,17 @@ class ObjectFactory {
     
     private let baseURLString = "https://breakingbadapi.com/"
     
-    func mainViewModel(viewController: MainViewProtocol) -> MainViewModel? {
-        
+    func networkClient() -> NetworkClient? {
         guard let url = URL(string: baseURLString) else { return nil }
         
-        let networkClient = NetworkClient(baseURL: url, session: URLSession.shared)
+        return NetworkClient(baseURL: url, session: URLSession.shared)
+    }
+    
+    func mainViewModel(viewController: MainViewProtocol) -> MainViewModel? {
+        
+        guard let networkClient = networkClient() else {
+            return nil
+        }
         let viewModel = MainViewModel(networkClient: networkClient, viewController: viewController)
         
         return viewModel
