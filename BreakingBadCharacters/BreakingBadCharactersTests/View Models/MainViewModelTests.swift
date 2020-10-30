@@ -55,6 +55,31 @@ class MainViewModelTests: XCTestCase {
         XCTAssertEqual(mockViewController.showAlertCalled, true)
         XCTAssertEqual(mockViewController.message, "The operation couldn’t be completed. (com.test.error error 0.)")
     }
+    
+    func test_filter_by_name_returns_correct_results() {
+        
+        sut.retrieveCharacters()
+        
+        sut.filteredContentForSearchText("Sky")
+        
+        XCTAssertEqual(mockViewController.model?.count, 1)
+        XCTAssertEqual(mockViewController.model?[0].charId, 3)
+        XCTAssertEqual(mockViewController.model?[0].name, "Skyler White")
+    }
+    
+    
+    func test_filter_by_season() {
+        
+        sut.retrieveCharacters()
+        
+        sut.filteredContentForSearchText("5", searchIndex: 1)
+        
+        XCTAssertEqual(mockViewController.model?.count, 2)
+        XCTAssertEqual(mockViewController.model?[0].charId, 1)
+        XCTAssertEqual(mockViewController.model?[0].name, "Walter White")
+        XCTAssertEqual(mockViewController.model?[1].charId, 2)
+        XCTAssertEqual(mockViewController.model?[1].name, "Jesse Pinkman")
+    }
 
 
 }
