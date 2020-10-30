@@ -41,6 +41,7 @@
 		F0F521A9254B193E002C13A1 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F521A8254B193E002C13A1 /* DetailViewModel.swift */; };
 		F0F521AE254B5647002C13A1 /* CharacterValidNoAppearance.json in Resources */ = {isa = PBXBuildFile; fileRef = F0F521AD254B5646002C13A1 /* CharacterValidNoAppearance.json */; };
 		F0F521B3254B5B06002C13A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F521B2254B5B06002C13A1 /* DetailViewController.swift */; };
+		F0F521C3254B9350002C13A1 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F521C2254B9350002C13A1 /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		F0F521A8254B193E002C13A1 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		F0F521AD254B5646002C13A1 /* CharacterValidNoAppearance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharacterValidNoAppearance.json; sourceTree = "<group>"; };
 		F0F521B2254B5B06002C13A1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F0F521C2254B9350002C13A1 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 			children = (
 				F0F52146254ACADB002C13A1 /* MainViewController.swift */,
 				F0F521B2254B5B06002C13A1 /* DetailViewController.swift */,
+				F0F521C2254B9350002C13A1 /* SpinnerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				F0EBA68C254A463D00B0194F /* Result+Decoded.swift in Sources */,
 				F0A629F825489BC30071BFC2 /* SceneDelegate.swift in Sources */,
 				F0F5213E254A530E002C13A1 /* MainViewModel.swift in Sources */,
+				F0F521C3254B9350002C13A1 /* SpinnerViewController.swift in Sources */,
 				F0F52147254ACADB002C13A1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

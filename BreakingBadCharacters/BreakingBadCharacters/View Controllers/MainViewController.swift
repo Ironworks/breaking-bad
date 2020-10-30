@@ -11,9 +11,12 @@ class MainViewController: UIViewController, MainViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var spinner: SpinnerViewController = SpinnerViewController()
+    
     var model: [Character]? {
         didSet {
             DispatchQueue.main.async {
+                self.removeSpinner()
                 self.tableView.reloadData()
             }
         }
@@ -41,7 +44,7 @@ class MainViewController: UIViewController, MainViewProtocol {
         definesPresentationContext = true
         searchController.searchBar.scopeButtonTitles = ["Name", "Season"]
         searchController.searchBar.delegate = self
-
+        showSpinner()
         let objectFactory = ObjectFactory()
         viewModel = objectFactory.mainViewModel(viewController: self)
         viewModel?.retrieveCharacters() 
@@ -62,6 +65,18 @@ class MainViewController: UIViewController, MainViewProtocol {
         }
     }
     
+    private func showSpinner() {
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+    }
+    
+    private func removeSpinner() {
+        spinner.willMove(toParent: nil)
+        spinner.view.removeFromSuperview()
+        spinner.removeFromParent()
+    }
     
     func showAlert(message: String) {
         
@@ -81,11 +96,6 @@ extension MainViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         scopeButtonIndex = selectedScope
         searchBar.text = ""
-//        if scopeButtonIndex == 0 {
-//            viewModel?.filteredContentForSearchText("")
-//        } else {
-//            viewModel?.filteredContentForSearchText(searchBar.text!, searchIndex: scopeButtonIndex)
-//        }
     }
 }
 
